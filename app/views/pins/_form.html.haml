@@ -5,9 +5,13 @@
       - @pin.errors.full_messages.each do |msg|
         %li= msg
   = f.label :title
-  = f.text_field :title
-  %br/
+  .form-group
+  = f.text_field :title, class: 'form-control'
+  = f.label :image
+  .form-group
+  = f.file_field :image
   = f.label :description
-  = f.text_area :description
+  .form-group
+  = f.text_area :description, class: 'form-control'
   %br/
   = f.submit
